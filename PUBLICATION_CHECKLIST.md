@@ -5,6 +5,7 @@
 
 ## How to read this document
 
+
 The repository is already public. The tables below distinguish:
 
 - checks completed for the **public documentation package**;
