@@ -36,7 +36,7 @@ Open technical-validation items must not be presented as completed measurements,
 | Git whitespace check | **Completed** | 2026-07-13 | `git diff --cached --check` passed during packaging. |
 | Final public ZIP integrity | **Completed** | 2026-07-13 | Recorded in `metadata/build-validation.md`. |
 | Public/private licensing boundary | **Documented** | 2026-07-13 | See `LICENSE`, `NOTICE.md` and `private_archive_manifest/excluded-files.md`. |
-| Rights to redistribute the two redacted photographs | **Open — author action required** | — | Confirm ownership/permission in `docs/assets/README.md`, or remove the images from the public repository. |
+| Rights to redistribute the two redacted photographs | **Completed** | Photographs were taken by the repository owner and published with permission. See `docs/assets/README.md`. |
 
 ## Technical validation status
 
