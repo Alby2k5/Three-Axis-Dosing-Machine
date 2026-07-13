@@ -21,7 +21,7 @@
 
 The `.m` files were checked for expected function/file naming, paired function terminators, local relative paths, explicit input validation and documented units/assumptions. The equations were independently exercised by a build-time reference implementation to generate preview figures and reference CSVs.
 
-**Not completed:** MATLAB or GNU Octave execution, because neither runtime was available in the build environment. Therefore this record is not a MATLAB compatibility certificate. Execute `tests/run_all_tests.m` and `matlab/scripts/run_all_analyses.m` in the target MATLAB release before technical publication.
+**Not completed:** MATLAB or GNU Octave execution, because neither runtime was available in the build environment. Therefore this record is not a MATLAB compatibility certificate. Execute `tests/run_all_tests.m` and `matlab/scripts/run_all_analyses.m` in the target MATLAB release before claiming MATLAB compatibility, presenting the preview figures as MATLAB-generated outputs, or reporting the model as runtime-validated.
 
 ## Validation not possible in this environment
 
@@ -32,4 +32,4 @@ The `.m` files were checked for expected function/file naming, paired function t
 - confirmation of individual authorship/contribution;
 - legal confirmation of rights to redistribute the two redacted photographs.
 
-These pending items remain open in `PUBLICATION_CHECKLIST.md` and `docs/verification-matrix.md`.
+These open items are tracked transparently in `PUBLICATION_CHECKLIST.md` and `docs/verification-matrix.md`; they do not represent completed machine validation.
