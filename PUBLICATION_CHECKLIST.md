@@ -1,43 +1,76 @@
-# Publication Checklist
+# Publication and Validation Status
 
-Complete every unchecked item before pushing to a public remote.
+**Last review:** 2026-07-13  
+**Scope:** public technical case-study repository only; this is not a deployable machine-control release or a machine-validation certificate.
 
-## Identity and confidentiality
+## How to read this document
 
-- [ ] Confirm that no personal names are present unless each person consented.
-- [ ] Confirm that no IP address, machine serial number, school/shared-drive name or local Windows path is present.
-- [ ] Inspect every image at full resolution; do not rely only on file names.
-- [ ] Strip EXIF/GPS metadata from all public images.
-- [ ] Keep the raw photo ZIP outside the repository.
+The repository is already public. The tables below distinguish:
 
-## Engineering files and third-party material
+- checks completed for the **public documentation package**;
+- validation activities that still require MATLAB, TIA Portal V15 or the physical machine;
+- items that limit technical claims but do not turn the published documentation into validated control software.
 
-- [ ] Do not add `.ap15`, `.zap15`, compiled WinCC packages, `PEData.*`, `XRef.db` or recipe archives.
-- [ ] Do not publish the manufacturer electrical drawing set without written permission.
-- [ ] Do not publish original spreadsheets, shared-drive screenshots or reports containing personal data.
-- [ ] Confirm that the MIT licence covers only newly authored repository material.
+Open technical-validation items must not be presented as completed measurements, commissioning evidence, safety validation or production-ready behavior.
 
-## Technical accuracy
+## Release status
 
-- [ ] Open the selected private project in TIA Portal V15 and record compile diagnostics.
-- [ ] Verify the actual CPU/module configuration (1214C photograph versus 1215C design record).
-- [ ] Resolve the `I1.5` address conflict.
-- [ ] Verify tag names, array bounds, sequence index limits and HMI handshakes.
-- [ ] Measure encoder scale, travel limits, sampling/update rate, stopping error and repeatability.
-- [ ] Validate homing, direction, limit switches, E-stop and optical safety functions under an approved test plan.
-- [ ] Replace all illustrative MATLAB parameters with measured/configured values before reporting machine timing.
+| Item | Status | Meaning |
+|---|---|---|
+| Public technical documentation | **Published** | Sanitized case study, documentation, simulations and non-deployable examples are available. |
+| Deployable PLC/HMI control software | **Not published** | Complete TIA Portal projects and compiled runtime packages are intentionally excluded. |
+| MATLAB runtime compatibility | **Open** | Static review was completed, but execution in a target MATLAB release is still required. |
+| Physical-machine performance | **Not validated** | Accuracy, repeatability, encoder scale, stopping error and cycle time were not measured in this repository. |
+| Safety validation | **Not claimed** | No machine-specific risk assessment or approved safety test is included. |
 
-## Contribution and CV
+## Public-package checks
 
-- [ ] Confirm which tasks were personally performed and retain evidence (notes, commits, test sheets).
-- [ ] Obtain agreement before naming collaborators.
-- [ ] Remove unsupported claims such as “implemented”, “restored” or “optimised” where only analysis exists.
-- [ ] Keep CV bullets consistent with `PERSONAL_CONTRIBUTION.md` and `TECHNICAL_SKILLS_EVIDENCE.md`.
+| Check | Status | Date | Evidence / note |
+|---|---|---|---|
+| Source archive integrity | **Completed** | 2026-07-13 | `metadata/build-validation.md` |
+| Public file inventory | **Completed** | 2026-07-13 | No unexpected large binaries or symlinks reported in `metadata/build-validation.md`. |
+| Exclusion of private engineering formats | **Completed** | 2026-07-13 | No `.ap15`, `.zap15`, `.alXX`, `.pdf`, `.xlsx` or `.docx` files in the public tree. |
+| Markdown relative links | **Completed** | 2026-07-13 | Recorded in `metadata/build-validation.md`. |
+| Personal-name, path and secret scan | **Completed** | 2026-07-13 | Recorded in `metadata/build-validation.md`. |
+| EXIF/GPS removal from public images | **Completed** | 2026-07-13 | Both public JPEGs were reported without EXIF tags. |
+| Git whitespace check | **Completed** | 2026-07-13 | `git diff --cached --check` passed during packaging. |
+| Final public ZIP integrity | **Completed** | 2026-07-13 | Recorded in `metadata/build-validation.md`. |
+| Public/private licensing boundary | **Documented** | 2026-07-13 | See `LICENSE`, `NOTICE.md` and `private_archive_manifest/excluded-files.md`. |
+| Rights to redistribute the two redacted photographs | **Open — author action required** | — | Confirm ownership/permission in `docs/assets/README.md`, or remove the images from the public repository. |
 
-## Repository quality
+## Technical validation status
 
-- [ ] Run the Markdown link checker.
-- [ ] Run the privacy/secret scan in the publication guide.
-- [ ] Run MATLAB tests in the target MATLAB release and commit the test log.
-- [ ] Regenerate figures and confirm units/legends.
-- [ ] Review the ZIP contents before upload.
+| Check | Status | Required environment | Evidence / next action |
+|---|---|---|---|
+| Static MATLAB source review | **Completed** | None | See `metadata/build-validation.md`. |
+| Run MATLAB contract tests | **Open** | Target MATLAB release | Track in issue #1 and commit the test log. |
+| Regenerate figures in MATLAB | **Open** | Target MATLAB release | Track in issue #1; record MATLAB version and operating system. |
+| Open and compile selected TIA project | **Open** | Licensed TIA Portal V15 | Record hardware, PLC and HMI compile diagnostics. |
+| Identify the project actually downloaded to PLC/HMI | **Not verified** | Private project plus authorised online comparison | Do not claim a canonical deployed version until verified. |
+| Resolve CPU configuration conflict | **Open** | TIA Portal V15 and hardware records | Photograph indicates CPU 1214C; a design record indicates 1215C. |
+| Resolve `I1.5` assignment conflict | **Open** | TIA Portal V15, wiring review and controlled I/O test | Keep the conflict visible until resolved. |
+| Verify tag names, array bounds and HMI handshake | **Open** | TIA Portal/WinCC V15 | Confirm the real PLC point-buffer size and transfer behavior. |
+| Measure encoder scale and travel limits | **Not available** | Physical machine and test equipment | Do not convert count units to millimetres without calibration. |
+| Measure stopping error, repeatability and cycle time | **Not available** | Physical machine and approved test plan | No measured performance is claimed. |
+| Validate homing, limits, E-stop and optical protection | **Not available** | Physical machine, qualified personnel and approved safety plan | This repository is not safety-validation evidence. |
+
+## Contribution and CV status
+
+| Check | Status | Evidence / next action |
+|---|---|---|
+| Separation of pre-existing, collaborative, recovered, simulated and proposed work | **Documented** | `PERSONAL_CONTRIBUTION.md` |
+| Confirmation of tasks personally performed by the repository owner | **Author confirmation required** | Add only activities that can be supported by notes, commits, reports, photographs or test sheets. |
+| Consent before naming collaborators | **Required if names are added** | Keep collaborators anonymous unless permission is available. |
+| Consistency between CV and repository | **Author review required** | Compare `CV_PROJECT_ENTRY.md`, `PERSONAL_CONTRIBUTION.md` and `TECHNICAL_SKILLS_EVIDENCE.md`. |
+
+## Interpretation
+
+This repository is suitable for review as a **documented engineering case study**. It must not be represented as:
+
+- a compiled or deployable PLC/HMI release;
+- evidence of completed machine commissioning;
+- proof of measured positioning accuracy or cycle time;
+- a validated safety function;
+- a MATLAB compatibility certificate until the runtime tests are executed.
+
+Open items are tracked transparently in this file and in `docs/verification-matrix.md`.
