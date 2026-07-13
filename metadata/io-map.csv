@@ -1,0 +1,34 @@
+direction,address,function,source_status,notes
+output,Q0.0,Z-axis raising,compact PDF + workbook,
+output,Q0.1,Z-axis lowering,compact PDF + workbook,
+output,Q0.2,X-axis speed 1,compact PDF + workbook,
+output,Q0.3,X-axis speed 2,compact PDF + workbook,
+output,Q0.4,X-axis direction/inversion,compact PDF + workbook,
+output,Q0.5,Y-axis speed 1,compact PDF + workbook,
+output,Q0.6,Y-axis speed 2,compact PDF + workbook,
+output,Q0.7,Y-axis direction/inversion,compact PDF + workbook,
+output,Q8.0,Solution stirring channel 1,compact PDF,
+output,Q8.1,Solution stirring channel 2,compact PDF,
+output,Q8.2,Washing drain,compact PDF,
+output,Q8.3,Washing water,compact PDF,
+output,Q8.4,Cup suction,compact PDF,
+output,Q8.5,Suction-cup turning,compact PDF,
+output,Q8.6,Solution water,compact PDF,
+output,Q9.0,Stepper step,compact PDF,workbook variant differs
+output,Q9.1,Stepper enable,compact PDF,workbook variant differs
+output,Q9.2,Stepper direction,compact PDF,workbook variant differs
+input,I0.0,X-axis zero position,compact PDF + workbook,
+input,I0.1,Y-axis zero position,compact PDF + workbook,
+input,I0.2,Liquid presence,compact PDF + workbook,
+input,I0.3,Z-axis upper position,compact PDF + workbook,
+input,I0.4,Z-axis lower position,compact PDF + workbook,
+input,I0.5,Stepper zero position,compact PDF + workbook,
+input,I0.6,Cup presence,compact PDF + workbook,
+input,I0.7,Air presence,compact PDF + workbook,
+input,I1.0,X encoder channel A,compact PDF + workbook,
+input,I1.1,X encoder channel B,compact PDF + workbook,
+input,I1.2,Y encoder channel A,compact PDF + workbook,
+input,I1.3,Y encoder channel B,compact PDF + workbook,
+input,I1.4,Suction-water flow meter,workbook only,absent from compact PDF
+input,I1.5,Z dosage position,compact PDF + workbook,conflicts with stepper clock note
+input,I1.5,Stepper HSC clock,conflicting workbook note,must be resolved

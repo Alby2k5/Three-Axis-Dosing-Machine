@@ -1,0 +1,67 @@
+# Siemens / TIA Portal private engineering files
+*.ap11
+*.ap12
+*.ap13
+*.ap14
+*.ap15
+*.ap16
+*.ap17
+*.ap18
+*.ap19
+*.zap11
+*.zap12
+*.zap13
+*.zap14
+*.zap15
+*.zap16
+*.zap17
+*.zap18
+*.zap19
+*.al11
+*.al12
+*.al13
+*.al14
+*.al15
+*.al16
+*.al17
+*.al18
+*.al19
+
+# Compiled project/runtime data
+*.fwc
+*.pwx
+*.tfz
+*.srt
+*.pma15_0
+PEData.*
+XRef.db
+IM/
+System/
+TMP/
+Logs/
+
+# Private evidence and third-party documents
+private-source/
+raw-photos/
+*.pdf
+*.xlsx
+*.docx
+
+# MATLAB generated files
+*.asv
+*.m~
+*.mat
+matlab/results/*.csv
+!matlab/results/reference-*.csv
+!matlab/results/README.md
+
+# OS/editor/build
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+*.log
+__pycache__/
+.vscode/
+.idea/
+site/

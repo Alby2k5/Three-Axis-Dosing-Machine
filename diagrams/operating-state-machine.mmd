@@ -1,0 +1,16 @@
+stateDiagram-v2
+  [*] --> Idle
+  Idle --> Load
+  Load --> Ready: data accepted
+  Load --> Idle: rejected
+  Ready --> Homing: reference required
+  Homing --> Ready: complete
+  Ready --> MoveXY: start
+  MoveXY --> Dosing: arrived
+  Dosing --> Advance: action complete
+  Advance --> MoveXY: next point
+  Advance --> Complete: last point
+  MoveXY --> Fault: stop/timeout
+  Dosing --> Fault: stop/timeout
+  Complete --> Idle: reset
+  Fault --> Idle: authorised reset

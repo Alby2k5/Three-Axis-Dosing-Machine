@@ -1,0 +1,11 @@
+flowchart LR
+  CSV[CSV point list] --> VBS[WinCC VBScript]
+  VBS --> HMI[HMI / PC Runtime]
+  HMI <--> PLC[S7-1200 PLC]
+  PLC --> IF[Opto-isolated I/O]
+  IF --> XY[X/Y drives]
+  IF --> Z[Z actuator]
+  IF --> STEP[Stepper plunger]
+  ENC[Incremental encoders] --> PLC
+  SENS[Zero/end/process sensors] --> PLC
+  CSV --> MATLAB[MATLAB offline analysis]

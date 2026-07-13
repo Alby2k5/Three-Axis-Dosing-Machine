@@ -1,0 +1,13 @@
+flowchart TD
+  RAW[Private source archive] --> INV[Hash inventory]
+  RAW --> COMP[Version comparison]
+  RAW --> PHOTO[Photographic inspection]
+  INV --> REG[Source/conflict register]
+  COMP --> REG
+  PHOTO --> REG
+  REG --> DOC[Public technical documentation]
+  REG --> CODE[MATLAB / clean-room examples]
+  DOC --> MATRIX[Evidence and verification matrix]
+  CODE --> MATRIX
+  MATRIX --> CV[CV wording]
+  RAW -. excluded .-> MANIFEST[Excluded-files manifest]

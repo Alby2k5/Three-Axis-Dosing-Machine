@@ -1,0 +1,17 @@
+sequenceDiagram
+  participant Operator
+  participant VBS as HMI VBScript
+  participant HMI
+  participant PLC
+  participant Motion
+  Operator->>VBS: Select CSV / Load
+  VBS->>VBS: Parse complete file
+  VBS-->>Operator: Reject line/schema/count error
+  VBS->>HMI: Commit X/Y arrays + count
+  HMI->>PLC: Request ID + data-ready
+  PLC->>PLC: Validate count/range/state
+  PLC-->>HMI: Accepted or error code
+  Operator->>PLC: Start
+  PLC->>Motion: Homing / target / speed / direction
+  Motion-->>PLC: Encoder counts and sensors
+  PLC-->>HMI: Index, status, alarms

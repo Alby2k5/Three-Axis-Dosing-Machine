@@ -1,0 +1,6 @@
+segment,distance_count_units,profile,peak_velocity_count_units_per_s,time_s
+1,800,trapezoidal,200,4.5
+2,400,trapezoidal,200,2.5
+3,800,trapezoidal,200,4.5
+TOTAL_TRAVEL,,,,11.5
+TOTAL_WITH_ILLUSTRATIVE_DWELL,,,,11.8
