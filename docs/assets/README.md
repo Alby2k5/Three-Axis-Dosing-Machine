@@ -19,3 +19,11 @@ The images establish visible presence and configuration only. They do not prove 
 ## Rights and publication check
 
 These image derivatives are not covered by the repository MIT licence unless the photograph rightsholder explicitly licenses them. Before publishing or redistributing the repository, confirm ownership/permission and re-inspect the full-resolution JPEGs for residual identifiers, reflections and third-party material. Remove this directory when permission is uncertain.
+
+## Photograph rights
+
+The two redacted photographs included in this repository were taken by the repository owner and are published with permission.
+
+They are included only as technical documentation of the machine and control cabinet.
+
+The photographs are not automatically covered by the MIT License unless explicitly stated otherwise.
