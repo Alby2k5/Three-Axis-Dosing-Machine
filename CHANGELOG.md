@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.1 — 2026-07-13
+
+- Replaced the pre-publication checklist wording with a transparent publication and validation status matrix.
+- Clarified that pending TIA Portal, MATLAB runtime and physical-machine checks limit validation claims rather than the availability of the documentation case study.
+- Added issue tracking for MATLAB execution and figure regeneration.
+- Clarified that the public repository is not a deployable control-software release or a machine-validation certificate.
+
 ## 1.0.0 — 2026-07-13
 
 - Created a public, evidence-traceable repository from the supplied TIA/HMI/CSV/document/photo archive.
